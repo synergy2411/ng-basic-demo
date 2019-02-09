@@ -135,3 +135,9 @@
 
 
 // npm install serve -g
+
+// npm i karma-cli -g
+// npm i karma --save-dev
+// karma init
+// npm i karma-jasmine karma-chrome-launcher --save-dev
+// npm i angular-mocks --save-dev

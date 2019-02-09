@@ -28,7 +28,13 @@
                 // return data;
                 return $http({
                     method: "GET",
-                    url: "assets/model/user-data.json"
+                    url: "assets/model/user-data.json",
+                    transformRequest : function(data){
+                        console.log("[TRANSFORM REQUEST]", data)
+                    },
+                    transformResponse : function(data){
+                        console.log("[TRANSFORM RESPOSNE]", data)
+                    }
                 })
             }
             function getRestApi() {
