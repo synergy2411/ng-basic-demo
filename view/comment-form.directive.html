@@ -1,0 +1,16 @@
+<!-- <form name = "commentForm" ng-controller="CommentController" ng-submit= "onAddComment(user)"> -->
+<form name = "commentForm" ng-submit= "onAddComment(user)">
+        <div class="form-group">
+            Stars : <select class="form-control" ng-model="comment.stars" required>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select>
+            <textarea name="body" class="form-control" ng-model="comment.body" required> </textarea>
+            <input type="email" class="form-control" ng-model="comment.author" required/>
+            <button  type= "submit" class="btn btn-block">Add Comment</button>
+            <!-- Form State : {{ commentForm.$valid }} -->
+        </div>
+    </form>

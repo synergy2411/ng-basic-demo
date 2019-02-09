@@ -9,20 +9,27 @@ data-main="main.js"></script> -->
 
 <script src="node_modules/angular/angular.min.js"></script>
 <script src="app/main.js"></script>
+<script src="app/services/data.service.js"></script>
+<script src="app/directives/comment-form.js"></script>
 <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
 <link rel="stylesheet" href="app/styles.css">
 
 </head>
 
 <body class="container">
+
+    
+
 <div ng-controller="MyController">
+        <!-- {{ users | json }} -->
 <h1>Hello {{msg}}</h1>
 <ul class="list-unstyled">
 <li class="well" ng-repeat="user in users">
 <div class="row">
     <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
-        <img ng-src="{{user.image}}" class="img-responsive">
-        <button class="btn btn-success" ng-click="moreInfo(user)">More Info</button>
+        <user-image></user-image>
+        <!-- <img ng-src="{{user.image}}" class="img-responsive">
+        <button class="btn btn-success" ng-click="moreInfo(user)">More Info</button> -->
     </div>
     <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
         <h2>{{ user.firstName  + " " + user.lastName }}</h2>
@@ -58,7 +65,11 @@ data-main="main.js"></script> -->
 
         </div>
         <div ng-if="tab === 2">
-            <form name = "commentForm" ng-controller="CommentController" ng-submit= "onAddComment(user)">
+            <!-- <div comment-form class = "container"></div> -->
+            <div comment-form ></div>
+            <!-- <div class= "comment-form"></div> -->
+            <!--Usage of Comment - directive: comment-form -->
+            <!-- <form name = "commentForm" ng-controller="CommentController" ng-submit= "onAddComment(user)">
                 <div class="form-group">
                     Stars : <select class="form-control" ng-model="comment.stars" required>
                         <option value="1">1</option>
@@ -70,9 +81,9 @@ data-main="main.js"></script> -->
                     <textarea name="body" class="form-control" ng-model="comment.body" required> </textarea>
                     <input type="email" class="form-control" ng-model="comment.author" required/>
                     <button disabled = "{{!commentForm.$valid}}" type= "submit" class="btn btn-block">Add Comment</button>
-                    <!-- Form State : {{ commentForm.$valid }} -->
+                    Form State : {{ commentForm.$valid }} 
                 </div>
-            </form>
+            </form> -->
         </div>
     </div>
 </section>

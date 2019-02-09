@@ -1,0 +1,68 @@
+[
+    {
+        "firstName": "Bill",
+        "lastName": "Gates",
+        "dob": "1965-12-20T18:30:00.000Z",
+        "company": "Microsoft",
+        "income": 50000,
+        "isWorking": true,
+        "image": "assets/images/bill.jpg",
+        "vote": 120,
+        "comments": [
+            {
+                "stars": 4,
+                "body": "Great Work, Mr. Bill!",
+                "author": "abc@abc.com"
+            },
+            {
+                "stars": 4,
+                "body": "Great Work, Mr. Bill!",
+                "author": "abc@abc.com"
+            }
+        ]
+    },
+    {
+        "firstName": "Steve",
+        "lastName": "Jobs",
+        "dob": "1965-01-01T18:30:00.000Z",
+        "company": "Apple",
+        "income": 0,
+        "isWorking": false,
+        "image": "assets/images/steve.png",
+        "vote": 180,
+        "comments": [
+            {
+                "stars": 4,
+                "body": "Great Work, Mr. Steve!",
+                "author": "abc@abc.com"
+            },
+            {
+                "stars": 4,
+                "body": "Great Work, Mr. Steve!",
+                "author": "abc@abc.com"
+            }
+        ]
+    },
+    {
+        "firstName": "Tim B.",
+        "lastName": "Lee",
+        "dob": "1965-07-31T18:30:00.000Z",
+        "company": "World Wide Web",
+        "income": 40000,
+        "isWorking": true,
+        "image": "assets/images/tim.jpg",
+        "vote": 150,
+        "comments": [
+            {
+                "stars": 4,
+                "body": "Great Work, Mr. Lee!",
+                "author": "abc@abc.com"
+            },
+            {
+                "stars": 4,
+                "body": "Great Work, Mr. Lee!",
+                "author": "abc@abc.com"
+            }
+        ]
+    }
+]
