@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+
+<head>
+<title>Document</title>
+<!-- Using  -->
+<!-- <script src="bower_components/requirejs/require.js" 
+data-main="main.js"></script> -->
+
+<script src="node_modules/angular/angular.min.js"></script>
+<script src="app/main.js"></script>
+<link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="app/styles.css">
+
+</head>
+
+<body class="container">
+<div ng-controller="MyController">
+<h1>Hello {{msg}}</h1>
+<ul class="list-unstyled">
+<li class="well" ng-repeat="user in users">
+<div class="row">
+    <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+        <img ng-src="{{user.image}}" class="img-responsive">
+        <button class="btn btn-success" ng-click="moreInfo(user)">More Info</button>
+    </div>
+    <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
+        <h2>{{ user.firstName  + " " + user.lastName }}</h2>
+        <p>Date of Birth : {{ user.dob }}</p>
+        <p ng-if="user.isWorking">Income : <span ng-bind="user.income"></span></p>
+    </div>
+    <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+        <em>
+            Total Votes : {{ user.vote }}
+            <br>
+            <input step="2" class="form-control" type="number" ng-model="user.vote">
+        </em>
+    </div>
+</div>
+<hr>
+<section ng-init="tab = 1">
+    <ul class="nav nav-pills">
+        <li><a href ng-click="tab = 1"> Show Comments </a></li>
+        <li><a href ng-click="tab = 2"> Add Comment </a></li>
+    </ul>
+    <div class="panel">
+        <div ng-if="tab === 1">
+            <ul class= "list-unstyled">
+                <li ng-repeat="comment in user.comments">
+                    <blockquote>
+                        <b>Stars : {{ comment.stars }} </b>
+                        <br>
+                        <p> {{ comment.body }}</p>
+                        <cite> - {{ comment.author }} </cite>
+                    </blockquote>
+                </li>
+            </ul>
+
+        </div>
+        <div ng-if="tab === 2">
+            <form name = "commentForm" ng-controller="CommentController" ng-submit= "onAddComment(user)">
+                <div class="form-group">
+                    Stars : <select class="form-control" ng-model="comment.stars" required>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                    <textarea name="body" class="form-control" ng-model="comment.body" required> </textarea>
+                    <input type="email" class="form-control" ng-model="comment.author" required/>
+                    <button disabled = "{{!commentForm.$valid}}" type= "submit" class="btn btn-block">Add Comment</button>
+                    <!-- Form State : {{ commentForm.$valid }} -->
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
+
+</li>
+</ul>
+</div>
+
+</body>
+
+</html>
+
+<!-- npm i bower -g -->
+<!-- bower init -->
+<!-- bower install angularjs --save -->
+<!-- bower install requirejs --save -->
+<!-- npm i bootstrap@3 --save -->

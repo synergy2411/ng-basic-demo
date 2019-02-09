@@ -1,0 +1,12 @@
+.ng-dirty.ng-valid[type="email"]{
+    border-bottom : 2px green solid;
+}
+.ng-dirty.ng-invalid[type="email"]{
+    border-bottom : 2px red solid;
+}
+.ng-dirty.ng-valid[name="body"]{
+    border-bottom : 2px green solid;
+}
+.ng-dirty.ng-invalid[name="body"]{
+    border-bottom : 2px red solid;
+}

@@ -1,0 +1,21 @@
+{
+  "name": "ng-basic-demo",
+  "authors": [
+    "synergy2411 <synergy2411@outlook.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "angularjs#^1.7.7",
+    "requirejs": "^2.3.6"
+  }
+}
